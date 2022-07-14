@@ -13,16 +13,66 @@ packer.startup(function()
 
   use 'wbthomason/packer.nvim'
 
+  -- REACT JS
+  use 'mlaursen/vim-react-snippets'
+
+  use 'SirVer/ultisnips'
+  use 'quangnguyen30192/cmp-nvim-ultisnips'
+  use 'maxmellon/vim-jsx-pretty'
+
+  use 'pangloss/vim-javascript'
+
+  -- HTML
+  use 'othree/html5.vim'
+
+  -- THEME
   use 'folke/tokyonight.nvim'
 
+  -- Commentary
+  use 'tpope/vim-commentary'
+
+  -- IdentLine
+  use 'Yggdroot/indentLine'
+
+  -- EMMET
+  use 'mattn/emmet-vim'
+
+  -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   require("config/lualine")
 
+
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   require("config/bufferline")
+
+  use 'neovim/nvim-lspconfig'
+
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+
+  use 'jiangmiao/auto-pairs'
+
+
+use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+-- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+
+use { 'neovim/nvim-lspconfig',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/nvim-cmp',
+    }
+require("config/cmp")
+
 
 use {
   "nvim-neo-tree/neo-tree.nvim",

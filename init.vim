@@ -16,3 +16,21 @@ colorscheme tokyonight
 lua require('settings')
 lua require('keymappings')
 lua require('plugins')
+
+" EMMET Configuration
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+let g:user_emmet_setting={
+      \ 'javascript':{
+      \ 'extends':'jsx'
+  \ }
+  \ }
+
+" Identline Configuration
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+
+" Utilsnip
+let g:UtilSnipsExpandTrigger='<tab>'
