@@ -21,6 +21,7 @@ packer.startup(function()
   use 'maxmellon/vim-jsx-pretty'
 
   use 'pangloss/vim-javascript'
+  use 'maxmellon/vim-jsx-pretty'
 
   -- HTML
   use 'othree/html5.vim'
@@ -30,9 +31,6 @@ packer.startup(function()
 
   -- Commentary
   use 'tpope/vim-commentary'
-
-  -- IdentLine
-  use 'Yggdroot/indentLine'
 
   -- EMMET
   use 'mattn/emmet-vim'
@@ -116,7 +114,7 @@ use {
       vim.fn.sign_define("DiagnosticSignInfo",
         {text = " ", texthl = "DiagnosticSignInfo"})
       vim.fn.sign_define("DiagnosticSignHint",
-        {text = "", texthl = "DiagnosticSignHint"})
+        {text = "ﯦ", texthl = "DiagnosticSignHint"})
       -- NOTE: this is changed from v1.x, which used the old style of highlight groups
       -- in the form "LspDiagnosticsSignWarning"
 
@@ -162,7 +160,7 @@ use {
             highlight = "NeoTreeFileIcon"
           },
           modified = {
-            symbol = "[+]",
+            symbol = "",
             highlight = "NeoTreeModified",
           },
           name = {
@@ -178,10 +176,10 @@ use {
               deleted   = "✖",-- this can only be used in the git_status source
               renamed   = "",-- this can only be used in the git_status source
               -- Status type
-              untracked = "",
-              ignored   = "",
-              unstaged  = "",
-              staged    = "",
+              untracked = "",
+              ignored   = "ﯽ",
+              unstaged  = "",
+              staged    = "",
               conflict  = "",
             }
           },
