@@ -1,21 +1,21 @@
 let mapleader="\ "
+syntax enable
 set sw=2
 set relativenumber
 set completeopt=menu,menuone,noselect
+set background=dark
+set termguicolors
 
 " THEME
-let g:tokyonight_style = "night"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-colorscheme tokyonight
+lua require('config/gruvbox')
+colorscheme gruvbox
 
 lua require('settings')
 lua require('keymappings')
 lua require('plugins')
+
+" Colorizer
+lua require'colorizer'.setup()
 
 " EMMET Configuration
 let g:user_emmet_mode='n'
@@ -28,3 +28,6 @@ let g:user_emmet_setting={
 
 " Utilsnip
 let g:UtilSnipsExpandTrigger='<tab>'
+
+" Indentline
+let g:indentLine_char_list = [ '⎸' ]

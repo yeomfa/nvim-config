@@ -14,20 +14,23 @@ packer.startup(function()
   use 'wbthomason/packer.nvim'
 
   -- REACT JS
-  use 'mlaursen/vim-react-snippets'
+--  use 'mlaursen/vim-react-snippets'
+  use 'yeomfa/nvim-react-snnipets'
 
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
   use 'maxmellon/vim-jsx-pretty'
 
   use 'pangloss/vim-javascript'
-  use 'maxmellon/vim-jsx-pretty'
 
   -- HTML
   use 'othree/html5.vim'
 
-  -- THEME
+  -- THEMES
   use 'folke/tokyonight.nvim'
+  use 'sainnhe/gruvbox-material'
+  use 'morhetz/gruvbox'
+  use 'eddyekofo94/gruvbox-flat.nvim'
 
   -- Commentary
   use 'tpope/vim-commentary'
@@ -43,25 +46,30 @@ packer.startup(function()
   require("config/lualine")
 
 
+  -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   require("config/bufferline")
 
+  -- LspConfig
   use 'neovim/nvim-lspconfig'
 
+  -- Treesitter
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   }
 
+  -- Autopairs
   use 'jiangmiao/auto-pairs'
 
-
+  -- Telescope
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+  -- cmp
 use { 'neovim/nvim-lspconfig',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
@@ -71,7 +79,15 @@ use { 'neovim/nvim-lspconfig',
     }
 require("config/cmp")
 
+-- multicursor
+use {
+  'mg979/vim-visual-multi', branch = 'master',
+}
 
+-- colorizer
+use 'norcalli/nvim-colorizer.lua'
+
+  -- Neotree
 use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -198,10 +214,10 @@ use {
             },
             ["<2-LeftMouse>"] = "open",
             ["o"] = "open",
-            ["S"] = "open_split",
-            ["s"] = "open_vsplit",
-            -- ["S"] = "split_with_window_picker",
-            -- ["s"] = "vsplit_with_window_picker",
+            -- ["S"] = "open_split",
+            -- ["s"] = "open_vsplit",
+            ["S"] = "split_with_window_picker",
+            ["s"] = "vsplit_with_window_picker",
             ["t"] = "open_tabnew",
             ["w"] = "open_with_window_picker",
             ["C"] = "close_node",
