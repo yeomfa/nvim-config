@@ -1,18 +1,32 @@
+let g:polyglot_disabled = ['jsx']
 let mapleader="\ "
-syntax enable
+syntax on
+set t_Co=256
+set cursorline
+set encoding=utf-8
 set sw=2
 set relativenumber
 set completeopt=menu,menuone,noselect
 set background=dark
-set termguicolors
+set nobackup
+set nowritebackup
 
 " THEME
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 lua require('config/gruvbox')
-colorscheme gruvbox
+lua require('config/tokyonight')
+lua require('config/onedark')
+colorscheme onedark
 
 lua require('settings')
 lua require('keymappings')
 lua require('plugins')
+lua require('config/nvimtree')
 
 " Colorizer
 lua require'colorizer'.setup()
@@ -29,5 +43,3 @@ let g:user_emmet_setting={
 " Utilsnip
 let g:UtilSnipsExpandTrigger='<tab>'
 
-" Indentline
-let g:indentLine_char_list = [ '⎸' ]

@@ -3,12 +3,12 @@ local mapper = function(mode, key, result)
 end
 
 -- Text editor
-mapper("n", "w", ":w<CR>")
-mapper("n", "q", ":q<CR>")
-mapper("n", "<leader>qq", ":q!<CR>")
+mapper("n", "<leader>w", ":w<CR>")
+mapper("n", "<leader>q", ":q<CR>")
 
 -- Neotree
-mapper("n", "<leader>o", ":Neotree<CR>")
+mapper("n", "<leader>o", ":NvimTreeFocus<CR>")
+mapper("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Bufferline
 mapper("n", "<leader>l", ":BufferLineCycleNext<CR>")
