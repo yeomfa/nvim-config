@@ -58,7 +58,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           show = {
             file = true,
             folder = true,
-            folder_arrow = true,
+            folder_arrow = false,
             git = true,
           },
           glyphs = {
@@ -66,8 +66,6 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             symlink = "",
             bookmark = "",
             folder = {
-              arrow_closed = "",
-              arrow_open = "",
               default = "",
               open = "",
               empty = "",
