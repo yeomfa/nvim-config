@@ -18,8 +18,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-lua require('config/gruvbox')
-lua require('config/tokyonight')
 lua require('config/onedark')
 colorscheme onedark
 
@@ -27,6 +25,10 @@ lua require('settings')
 lua require('keymappings')
 lua require('plugins')
 lua require('config/nvimtree')
+lua require('config/indentline')
+lua require("config/lualine")
+lua require("config/cmp")
+lua require("config/bufferline")
 
 " Colorizer
 lua require'colorizer'.setup()

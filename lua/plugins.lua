@@ -43,12 +43,9 @@ packer.startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  require("config/lualine")
-
 
   -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-  require("config/bufferline")
 
   -- LspConfig
   use 'neovim/nvim-lspconfig'
@@ -73,7 +70,6 @@ packer.startup(function()
         'hrsh7th/cmp-cmdline',
         'hrsh7th/nvim-cmp',
       }
-  require("config/cmp")
   
   -- multicursor
   use {
