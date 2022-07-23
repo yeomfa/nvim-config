@@ -92,4 +92,6 @@ packer.startup(function()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use 'Yggdroot/indentLine'
+
 end)

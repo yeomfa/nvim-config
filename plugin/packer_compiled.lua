@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/html5.vim",
     url = "https://github.com/othree/html5.vim"
   },
+  indentLine = {
+    loaded = true,
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/indentLine",
+    url = "https://github.com/Yggdroot/indentLine"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lualine.nvim",
