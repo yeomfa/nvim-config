@@ -90,4 +90,7 @@ packer.startup(function()
 
   use 'Yggdroot/indentLine'
 
+  -- Dashboard
+  use 'glepnir/dashboard-nvim'
+
 end)

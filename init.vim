@@ -29,6 +29,7 @@ lua require('config/indentline')
 lua require("config/lualine")
 lua require("config/cmp")
 lua require("config/bufferline")
+lua require("config/dashboard")
 
 " Colorizer
 lua require'colorizer'.setup()
