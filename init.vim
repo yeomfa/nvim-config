@@ -30,6 +30,8 @@ lua require("config/lualine")
 lua require("config/cmp")
 lua require("config/bufferline")
 lua require("config/dashboard")
+lua require("config/telescope")
+
 
 " Colorizer
 lua require'colorizer'.setup()
