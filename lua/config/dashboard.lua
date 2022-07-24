@@ -7,26 +7,26 @@ dash.preview_file_width = 80
 dash.custom_center = {
 	{
 		icon = "  ",
-		desc = "finder                           ",
+		desc = "Find files                           ",
 		shortcut = "SPC ff",
-		action = "Telescope find_files find_command=rg,--hidden,--files",
+		action = "Telescope find_files",
 	},
 	{
 		icon = "  ",
-		desc = "notes                            ",
-		shortcut = "~",
-		action = ":e ~/Documents/vimnotes.md",
+		desc = "Recent files                         ",
+		shortcut = "SPC fr",
+		action = "Telescope oldfiles",
 	},
 	{
-		icon = "  ",
-		desc = "dots                             ",
-		shortcut = "~",
-		action = "Telescope find_files cwd=~/.config",
+		icon = "  ",
+		desc = "Open tree      	                     ",
+		shortcut = "SPC e ",
+		action = "NvimTreeToggle",
 	},
 	{
 		icon = "  ",
-		desc = "exit                             ",
-		shortcut = "SPC q",
+		desc = "Exit             	                   ",
+		shortcut = "SPC q ",
 		action = "qa",
 	},
 }

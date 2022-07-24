@@ -26,6 +26,7 @@ mapper("n", "<leader>ff", ":Telescope find_files<cr>")
 mapper("n", "<leader>fg", ":Telescope live_grep<cr>")
 mapper("n", "<leader>fb", ":Telescope buffers<cr>")
 mapper("n", "<leader>fh", ":Telescope help_tags<cr>")
+mapper("n", "<leader>fr", ":Telescope oldfiles<cr>")
 
 -- Commentary
 mapper("", "<leader>}", ":Commentary<CR>")
