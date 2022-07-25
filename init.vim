@@ -1,5 +1,4 @@
 let g:polyglot_disabled = ['jsx']
-let mapleader="\ "
 syntax on
 set t_Co=256
 set cursorline
@@ -47,4 +46,4 @@ let g:user_emmet_setting={
 
 " Utilsnip
 let g:UtilSnipsExpandTrigger='<tab>'
-
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]

@@ -34,7 +34,7 @@ require('onedark').setup  {
 	  	fg = "#B9C1CB",
 	  	purple = "#53B8E4",
 	  	green = "#66CC66",
-	  	orange = "#7a818e",
+	  	orange = "#ed8d4e",
 	  	blue = "#149EE4",
 	  	yellow = "#C184F0",
 	  	cyan = "#48b0bd",

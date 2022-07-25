@@ -11,6 +11,7 @@ o.wrap = false
 o.breakindent = true
 o.shiftwidth = 2
 vim.opt.expandtab = false
+vim.g.mapleader = " "
 
 o.splitright = true
 o.hidden = true

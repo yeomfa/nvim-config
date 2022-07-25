@@ -15,7 +15,7 @@ packer.startup(function()
   -- REACT JS
   use 'neoclide/vim-jsx-improve'
   use 'maxmellon/vim-jsx-pretty'
-  use 'yeomfa/nvim-react-snnipets'
+  -- use 'yeomfa/nvim-react-snnipets'
 
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -64,12 +64,13 @@ packer.startup(function()
   }
   
     -- cmp
-  use { 'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-cmdline',
-        'hrsh7th/nvim-cmp',
-      }
+  use { 
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+  }
   
   -- multicursor
   use {
@@ -88,6 +89,7 @@ packer.startup(function()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  -- IndentLine
   use 'Yggdroot/indentLine'
 
   -- Dashboard

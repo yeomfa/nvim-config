@@ -149,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-react-snnipets"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-react-snnipets",
-    url = "https://github.com/yeomfa/nvim-react-snnipets"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
