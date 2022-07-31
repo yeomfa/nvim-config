@@ -15,7 +15,6 @@ packer.startup(function()
   -- REACT JS
   use 'neoclide/vim-jsx-improve'
   use 'maxmellon/vim-jsx-pretty'
-  -- use 'yeomfa/nvim-react-snnipets'
 
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -28,9 +27,8 @@ packer.startup(function()
   use 'othree/html5.vim'
 
   -- THEMES
-  use 'folke/tokyonight.nvim'
-  use 'morhetz/gruvbox'
   use 'navarasu/onedark.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
   -- Commentary
   use 'tpope/vim-commentary'
@@ -41,11 +39,13 @@ packer.startup(function()
   -- Lualine
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   -- Bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v2.*", 
+  -- requires = 'kyazdani42/nvim-web-devicons'
+}
 
   -- LspConfig
   use 'neovim/nvim-lspconfig'
@@ -84,7 +84,7 @@ packer.startup(function()
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      -- 'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }

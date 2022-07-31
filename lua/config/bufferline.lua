@@ -54,7 +54,7 @@ require('bufferline').setup {
         return true
       end
     end,
-    offsets = {{filetype = "NvimTree", text = 'Explorer: '..vim.fn.substitute(vim.fn.getcwd(), '^.*/', '', ''), text_align ="center"}},
+    offsets = {{filetype = "NvimTree", text = 'Project: '..vim.fn.substitute(vim.fn.getcwd(), '^.*/', '', ''), text_align ="center"}},
     color_icons = true, -- whether or not to add the filetype icon highlights
     show_buffer_icons = true, -- disable filetype icons for buffers
     show_buffer_close_icons = true,

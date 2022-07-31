@@ -5,6 +5,8 @@ end
 -- Text editor
 mapper("n", "<leader>w", ":w<CR>")
 mapper("n", "<leader>q", ":q<CR>")
+mapper("v", "<leader>s", ":sort<CR>")
+mapper("n", "<leader>s", ":sort<CR>")
 
 -- Neotree
 mapper("n", "<leader>o", ":NvimTreeFocus<CR>")
@@ -13,7 +15,11 @@ mapper("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- Bufferline
 mapper("n", "<leader>l", ":BufferLineCycleNext<CR>")
 mapper("n", "<leader>h", ":BufferLineCyclePrev<CR>")
-mapper("n", "<leader>c", ":BufferLinePickClose<CR>")
+mapper("n", "<leader>bc", ":BufferLinePickClose<CR>")
+mapper("n", "<leader>bp", ":BufferLinePick<CR>")
+mapper("n", "<leader>ch", ":BufferLineCloseLeft<CR>")
+mapper("n", "<leader>cl", ":BufferLineCloseRight<CR>")
+mapper("n", "<leader>ca", ":bd<CR>")
 
 -- Packer
 mapper("n", "<leader>pi", ":PackerInstall<CR>")

@@ -30,6 +30,7 @@ lua require("config/cmp")
 lua require("config/bufferline")
 lua require("config/dashboard")
 lua require("config/telescope")
+lua require("config/nvim_icons")
 
 
 " Colorizer
