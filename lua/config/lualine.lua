@@ -1,12 +1,49 @@
+local colors = {
+  blue = '#149EE4',
+  red = '#d1493f',
+  grey = '#a0a1a7',
+  black = '#10121B',
+  white = '#d1d1d1',
+  whitesmoke = '#a8a8a8',
+  bg = '#1b1f2e',
+  bg_d = "#10121B",
+  light_green = '#83a598',
+  orange = '#fe8019',
+  green = '#66CC66',
+}
+
+local theme = {
+  normal = {
+    a = { fg = colors.black, bg = colors.blue },
+    b = { fg = colors.whitesmoke, bg = colors.bg_d },
+    c = { fg = colors.whitesmoke, bg = colors.bg },
+    z = { fg = colors.white, bg = colors.black },
+  },
+  insert = { a = { fg = colors.black, bg = colors.green } },
+  visual = { a = { fg = colors.black, bg = colors.red } },
+  replace = { a = { fg = colors.black, bg = colors.light_green } },
+}
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'ayu_mirage',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = { 'packer', 'NvimTree' },
+    theme = theme,
+    component_separators = { left = '▏', right = '▏'},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      'packer',
+      'NvimTree',
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
     always_divide_middle = true,
     globalstatus = false,
+    refresh = {
+      statusline = 100,
+      tabline = 1000,
+      winbar = 1000,
+    }
   },
   sections = {
     lualine_a = {'mode'},
@@ -25,5 +62,7 @@ require('lualine').setup {
     lualine_z = {}
   },
   tabline = {},
+  winbar = {},
+  inactive_winbar = {},
   extensions = {}
 }
