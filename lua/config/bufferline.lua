@@ -9,10 +9,10 @@ require('bufferline').setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = '',
+    indicator_icon = '▎',
     buffer_close_icon = '',
     modified_icon = '●',
-    close_icon = '',
+    close_icon = '',
     left_trunc_marker = '',
     right_trunc_marker = '',
     --- name_formatter can be used to change the buffer's label in the bufferline.
@@ -27,7 +27,7 @@ require('bufferline').setup {
     end,
     max_name_length = 18,
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
-    tab_size = 18,
+    tab_size = 15,
     diagnostics ="nvim_lsp",
     diagnostics_update_in_insert = false,
     -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
@@ -54,7 +54,7 @@ require('bufferline').setup {
         return true
       end
     end,
-    offsets = {{filetype = "NvimTree", text = 'Project: '..vim.fn.substitute(vim.fn.getcwd(), '^.*/', '', ''), text_align ="center"}},
+    offsets = {{filetype = "NvimTree", text = 'Folder: '..vim.fn.substitute(vim.fn.getcwd(), '^.*/', '', ''), padding = 1, highlight = "Normal", text_align ="center"}},
     color_icons = true, -- whether or not to add the filetype icon highlights
     show_buffer_icons = true, -- disable filetype icons for buffers
     show_buffer_close_icons = true,
@@ -64,6 +64,7 @@ require('bufferline').setup {
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
+    -- separator_style = { '|', '' },
     separator_style = 'slant',
     enforce_regular_tabs = false,
     always_show_bufferline = true,

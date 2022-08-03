@@ -2,9 +2,9 @@ packer = require 'packer'
 
 packer.init {
   display = {
-   open_fn = require('packer.util').float,
-   show_all_info = true,
-   prompt_border = 'double',
+    open_fn = require('packer.util').float,
+    show_all_info = true,
+    prompt_border = 'double',
   }
 }
 
@@ -12,7 +12,7 @@ packer.startup(function()
 
   use 'wbthomason/packer.nvim'
 
-  -- REACT JS
+  -- REACT, JS & TS
   use 'neoclide/vim-jsx-improve'
   use 'maxmellon/vim-jsx-pretty'
 
