@@ -18,7 +18,7 @@ require('onedark').setup  {
         keywords = 'italic',
         functions = 'italic',
         strings = 'italic',
-        variables = 'italic'
+        variables = 'none'
     },
 
     -- Custom Highlights --
