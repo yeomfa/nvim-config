@@ -1,4 +1,3 @@
--- Lua
 require('onedark').setup  {
     -- Main options --
     style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
@@ -23,13 +22,13 @@ require('onedark').setup  {
 
     -- Custom Highlights --
     colors = {
-	  	black = "#0e1013",
-	  	bg0 = "#171826",
-	  	bg1 = "#282c34",
-	  	bg2 = "#282c34",
-	  	bg3 = "#323641",
-	  	bg_d = "#10121B",
-	  	bg_blue = "#61afef",
+      black = "#0e1013",
+      bg0 = "#1f2329",
+      bg1 = "#282c34",
+      bg2 = "#30363f",
+      bg3 = "#323641",
+		  bg_d = "#181b20", 
+      bg_blue = "#61afef",
 	  	bg_yellow = "#e8c88c",
 	  	fg = "#B9C1CB",
 	  	purple = "#53B8E4",

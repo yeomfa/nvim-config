@@ -9,7 +9,7 @@ require('bufferline').setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = '|',
+    indicator_icon = '▎',
     buffer_close_icon = '',
     modified_icon = '●',
     close_icon = '',
@@ -65,7 +65,7 @@ require('bufferline').setup {
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
     -- separator_style = { '|', '' },
-    separator_style = 'slant',
+    separator_style = 'thin',
     enforce_regular_tabs = false,
     always_show_bufferline = true,
     sort_by = 'insert_after_current',

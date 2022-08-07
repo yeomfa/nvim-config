@@ -17,20 +17,21 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-lua require('config/onedark')
+lua require("config/onedark")
 colorscheme onedark
 
-lua require('settings')
-lua require('keymappings')
-lua require('plugins')
-lua require('config/nvimtree')
-lua require('config/indentline')
+lua require("config/bufferline")
 lua require("config/lualine")
 lua require("config/cmp")
-lua require("config/bufferline")
 lua require("config/dashboard")
-lua require("config/telescope")
 lua require("config/nvim_icons")
+lua require("config/telescope")
+lua require('config/indentline')
+lua require('config/nvimtree')
+
+lua require('plugins')
+lua require('settings')
+lua require('keymappings')
 
 
 " Colorizer
