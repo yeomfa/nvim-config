@@ -79,30 +79,15 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  ["cmp-buffer"] = {
+  ["coq.artifacts"] = {
     loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
   },
-  ["cmp-cmdline"] = {
+  coq_nvim = {
     loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-ultisnips"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips",
-    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/coq_nvim",
+    url = "https://github.com/ms-jpq/coq_nvim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -129,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
@@ -148,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
-  },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

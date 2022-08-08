@@ -60,7 +60,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           show = {
             file = true,
             folder = true,
-            folder_arrow = false,
+            folder_arrow = true,
             git = true,
           },
           glyphs = {

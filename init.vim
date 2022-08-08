@@ -1,9 +1,10 @@
-let g:polyglot_disabled = ['jsx']
+lua require("config/polyglot")
 syntax on
 set t_Co=256
 set cursorline
 set encoding=utf-8
-set sw=2
+set tabstop=2
+set sw=1
 set relativenumber
 set completeopt=menu,menuone,noselect
 set background=dark
@@ -22,7 +23,8 @@ colorscheme onedark
 
 lua require("config/bufferline")
 lua require("config/lualine")
-lua require("config/cmp")
+lua require("config/lsp")
+" lua require("config/cmp")
 lua require("config/dashboard")
 lua require("config/nvim_icons")
 lua require("config/telescope")
@@ -49,3 +51,6 @@ let g:user_emmet_setting={
 " Utilsnip
 let g:UtilSnipsExpandTrigger='<tab>'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+
+" Coc
+source ~/.config/nvim/lua/config/coc.vim

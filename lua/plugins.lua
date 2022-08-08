@@ -17,7 +17,6 @@ packer.startup(function()
   use 'maxmellon/vim-jsx-pretty'
 
   use 'SirVer/ultisnips'
-  use 'quangnguyen30192/cmp-nvim-ultisnips'
 
   use 'pangloss/vim-javascript'
   use 'yuezk/vim-js'
@@ -62,16 +61,7 @@ packer.startup(function()
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
-    -- cmp
-  use { 
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
-  }
-  
+
   -- multicursor
   use {
     'mg979/vim-visual-multi', branch = 'master',
@@ -94,5 +84,8 @@ packer.startup(function()
 
   -- Dashboard
   use 'glepnir/dashboard-nvim'
+
+  -- Coc
+  use {'neoclide/coc.nvim', branch = 'release'}
 
 end)
