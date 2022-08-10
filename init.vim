@@ -1,4 +1,3 @@
-lua require("config/polyglot")
 syntax on
 set t_Co=256
 set cursorline
@@ -18,18 +17,24 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-lua require("config/onedark")
-colorscheme onedark
+lua require("config/gvbaby")
 
+lua require("config/autopairs")
+lua require("config/null-ls")
+lua require("config/prettier")
+lua require("config/autotag")
+lua require("config/lspsaga")
+lua require("config/gitsigns")
 lua require("config/bufferline")
 lua require("config/lualine")
 lua require("config/lsp")
-" lua require("config/cmp")
 lua require("config/dashboard")
 lua require("config/nvim_icons")
 lua require("config/telescope")
 lua require('config/indentline')
+lua require('config/cmp')
 lua require('config/nvimtree')
+lua require('config/treesitter')
 
 lua require('plugins')
 lua require('settings')
@@ -49,8 +54,8 @@ let g:user_emmet_setting={
   \ }
 
 " Utilsnip
-let g:UtilSnipsExpandTrigger='<tab>'
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+" let g:UtilSnipsExpandTrigger='<tab>'
+" let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
 
 " Coc
-source ~/.config/nvim/lua/config/coc.vim
+" source ~/.config/nvim/lua/config/coc.vim

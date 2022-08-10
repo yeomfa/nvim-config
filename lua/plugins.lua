@@ -1,91 +1,97 @@
-packer = require 'packer'
+local status, packer = pcall(require, "packer")
+if (not status) then return end
 
 packer.init {
-  display = {
-    open_fn = require('packer.util').float,
-    show_all_info = true,
-    prompt_border = 'double',
-  }
+	display = {
+		open_fn = require('packer.util').float,
+		show_all_info = true,
+		prompt_border = 'double',
+	}
 }
 
-packer.startup(function()
+vim.cmd [[packadd packer.nvim]]
 
-  use 'wbthomason/packer.nvim'
+packer.startup(function(use)
 
-  -- REACT, JS & TS
-  use 'neoclide/vim-jsx-improve'
-  use 'maxmellon/vim-jsx-pretty'
+	-- Packer
+	use 'wbthomason/packer.nvim'
 
-  use 'SirVer/ultisnips'
+	--LuaSnip
+	use 'L3MON4D3/LuaSnip'
 
-  use 'pangloss/vim-javascript'
-  use 'yuezk/vim-js'
-  use 'HerringtonDarkholme/yats.vim'
+	-- THEMES
+	use 'luisiacc/gruvbox-baby'
+	use 'kyazdani42/nvim-web-devicons'
 
-  -- HTML
-  use 'othree/html5.vim'
+	-- Autopairs
+	use 'windwp/nvim-autopairs'
+	use 'windwp/nvim-ts-autotag'
 
-  -- THEMES
-  use 'navarasu/onedark.nvim'
-  use 'kyazdani42/nvim-web-devicons'
+	-- Commentary
+	use 'tpope/vim-commentary'
 
-  -- Commentary
-  use 'tpope/vim-commentary'
+	-- EMMET
+	use 'mattn/emmet-vim'
 
-  -- EMMET
-  use 'mattn/emmet-vim'
+	-- Lualine
+	use 'nvim-lualine/lualine.nvim'
 
-  -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+	-- Bufferline
+	use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
-  -- Bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", 
-  -- requires = 'kyazdani42/nvim-web-devicons'
-}
+	-- LspConfig
+	use 'neovim/nvim-lspconfig'
 
-  -- LspConfig
-  use 'neovim/nvim-lspconfig'
+	-- Telescope
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
 
-  -- Polyglot
-  use 'sheerun/vim-polyglot'
+	-- multicursor
+	use {
+		'mg979/vim-visual-multi', branch = 'master',
+	}
 
-  -- Autopairs
-  use 'jiangmiao/auto-pairs'
+	-- colorizer
+	use 'norcalli/nvim-colorizer.lua'
 
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+	-- Nvim tree
+	use {
+		'kyazdani42/nvim-tree.lua',
+		tag = 'nightly' -- optional, updated every week. (see issue #1193)
+	}
 
-  -- multicursor
-  use {
-    'mg979/vim-visual-multi', branch = 'master',
-  }
-  
-  -- colorizer
-  use 'norcalli/nvim-colorizer.lua'
+	-- IndentLine
+	use 'Yggdroot/indentLine'
 
-  -- Nvim tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      -- 'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
+	-- Dashboard
+	use 'glepnir/dashboard-nvim'
 
-  -- IndentLine
-  use 'Yggdroot/indentLine'
+	-- vscode-like pictograms
+	use 'onsails/lspkind.nvim'
 
-  -- Dashboard
-  use 'glepnir/dashboard-nvim'
+	-- cmp
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/nvim-cmp'
 
-  -- Coc
-  use {'neoclide/coc.nvim', branch = 'release'}
+	-- treesitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
+
+	-- null ls
+	use 'jose-elias-alvarez/null-ls.nvim'
+
+	-- prettier
+	use 'MunifTanjim/prettier.nvim'
+
+	-- lspsaga
+	use 'glepnir/lspsaga.nvim'
+
+	-- gitsigns
+	use 'lewis6991/gitsigns.nvim'
 
 end)
