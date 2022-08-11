@@ -2,96 +2,97 @@ local status, packer = pcall(require, "packer")
 if (not status) then return end
 
 packer.init {
-	display = {
-		open_fn = require('packer.util').float,
-		show_all_info = true,
-		prompt_border = 'double',
-	}
+  display = {
+    open_fn = require('packer.util').float,
+    show_all_info = true,
+    prompt_border = 'double',
+  }
 }
 
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
 
-	-- Packer
-	use 'wbthomason/packer.nvim'
+  -- Packer
+  use 'wbthomason/packer.nvim'
 
-	--LuaSnip
-	use 'L3MON4D3/LuaSnip'
+  --LuaSnip
+  use 'L3MON4D3/LuaSnip'
 
-	-- THEMES
-	use 'luisiacc/gruvbox-baby'
-	use 'kyazdani42/nvim-web-devicons'
+  -- THEMES
+  use 'luisiacc/gruvbox-baby'
+  use 'kyazdani42/nvim-web-devicons'
 
-	-- Autopairs
-	use 'windwp/nvim-autopairs'
-	use 'windwp/nvim-ts-autotag'
+  -- Autopairs
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
 
-	-- Commentary
-	use 'tpope/vim-commentary'
+  -- Commentary
+  use 'tpope/vim-commentary'
 
-	-- EMMET
-	use 'mattn/emmet-vim'
+  -- EMMET
+  use 'mattn/emmet-vim'
 
-	-- Lualine
-	use 'nvim-lualine/lualine.nvim'
+  -- Lualine
+  use 'nvim-lualine/lualine.nvim'
 
-	-- Bufferline
-	use { 'akinsho/bufferline.nvim', tag = "v2.*" }
+  -- Bufferline
+  use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
-	-- LspConfig
-	use 'neovim/nvim-lspconfig'
+  -- LspConfig
+  use 'neovim/nvim-lspconfig'
 
-	-- Telescope
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		requires = { { 'nvim-lua/plenary.nvim' } }
-	}
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
 
-	-- multicursor
-	use {
-		'mg979/vim-visual-multi', branch = 'master',
-	}
+  -- multicursor
+  use {
+    'mg979/vim-visual-multi', branch = 'master',
+  }
 
-	-- colorizer
-	use 'norcalli/nvim-colorizer.lua'
+  -- colorizer
+  use 'norcalli/nvim-colorizer.lua'
 
-	-- Nvim tree
-	use {
-		'kyazdani42/nvim-tree.lua',
-		tag = 'nightly' -- optional, updated every week. (see issue #1193)
-	}
+  -- Nvim tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 
-	-- IndentLine
-	use 'Yggdroot/indentLine'
+  -- Dashboard
+  use 'glepnir/dashboard-nvim'
 
-	-- Dashboard
-	use 'glepnir/dashboard-nvim'
+  -- vscode-like pictograms
+  use 'onsails/lspkind.nvim'
 
-	-- vscode-like pictograms
-	use 'onsails/lspkind.nvim'
+  -- cmp
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
 
-	-- cmp
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/nvim-cmp'
+  -- treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
-	-- treesitter
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
+  -- prettier
+  use 'MunifTanjim/prettier.nvim'
 
-	-- null ls
-	use 'jose-elias-alvarez/null-ls.nvim'
+  -- lspsaga
+  use 'glepnir/lspsaga.nvim'
 
-	-- prettier
-	use 'MunifTanjim/prettier.nvim'
+  -- gitsigns
+  use 'lewis6991/gitsigns.nvim'
 
-	-- lspsaga
-	use 'glepnir/lspsaga.nvim'
+  -- mason
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
 
-	-- gitsigns
-	use 'lewis6991/gitsigns.nvim'
+  -- blankline
+  use "lukas-reineke/indent-blankline.nvim"
 
 end)
