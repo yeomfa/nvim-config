@@ -25,6 +25,7 @@ nvim_lsp.tsserver.setup {
 
 -- Css
 nvim_lsp.cssls.setup {
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "css", "scss", "less" },
   cmd = { "vscode-css-language-server", "--stdio" }
@@ -32,11 +33,11 @@ nvim_lsp.cssls.setup {
 
 -- html
 nvim_lsp.html.setup {
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "html" },
   cmd = { "vscode-html-language-server", "--stdio" }
 }
-
 
 -- Lua
 nvim_lsp.sumneko_lua.setup {
@@ -55,4 +56,18 @@ nvim_lsp.sumneko_lua.setup {
       }
     }
   }
+}
+
+-- Python
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  filetypes = { "python" },
+  cmd = { "pyright-langserver", "--stdio" }
+}
+
+-- C
+nvim_lsp.ccls.setup {
+  on_attach = on_attach,
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  cmd = { 'ccls' },
 }
