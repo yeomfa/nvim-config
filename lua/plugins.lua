@@ -13,36 +13,37 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
 
-  -- Packer
+  -- packer
   use 'wbthomason/packer.nvim'
 
-  --LuaSnip
+  -- luasnip
   use 'L3MON4D3/LuaSnip'
 
-  -- THEMES
+  -- themes
+  use 'folke/tokyonight.nvim'
   use 'luisiacc/gruvbox-baby'
   use 'kyazdani42/nvim-web-devicons'
 
-  -- Autopairs
+  -- autopairs
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
-  -- Commentary
+  -- commentary
   use 'tpope/vim-commentary'
 
-  -- EMMET
+  -- emmet
   use 'mattn/emmet-vim'
 
-  -- Lualine
+  -- lualine
   use 'nvim-lualine/lualine.nvim'
 
-  -- Bufferline
+  -- bufferline
   use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
-  -- LspConfig
+  -- lspConfig
   use 'neovim/nvim-lspconfig'
 
-  -- Telescope
+  -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
@@ -56,13 +57,13 @@ packer.startup(function(use)
   -- colorizer
   use 'norcalli/nvim-colorizer.lua'
 
-  -- Nvim tree
+  -- nvim tree
   use {
     'kyazdani42/nvim-tree.lua',
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  -- Dashboard
+  -- dashboard
   use 'glepnir/dashboard-nvim'
 
   -- vscode-like pictograms
@@ -72,6 +73,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
+  use 'saadparwaiz1/cmp_luasnip'
 
   -- treesitter
   use {
@@ -94,5 +96,8 @@ packer.startup(function(use)
 
   -- blankline
   use "lukas-reineke/indent-blankline.nvim"
+
+  -- friendly snippets
+  use "rafamadriz/friendly-snippets"
 
 end)

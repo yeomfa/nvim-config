@@ -13,12 +13,30 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- Typescript and react js
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
+
+-- Css
+nvim_lsp.cssls.setup {
+  capabilities = capabilities,
+  filetypes = { "css", "scss", "less" },
+  cmd = { "vscode-css-language-server", "--stdio" }
+}
+
+-- html
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+  filetypes = { "html" },
+  cmd = { "vscode-html-language-server", "--stdio" }
+}
+
 
 -- Lua
 nvim_lsp.sumneko_lua.setup {

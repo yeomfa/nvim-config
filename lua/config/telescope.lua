@@ -1,14 +1,22 @@
-require('telescope').setup {
+local status, telescope = pcall(require, 'telescope')
+if (not status) then return end
+
+telescope.setup {
   defaults = {
     prompt_prefix = " ",
     file_ignore_patterns = {
       "node_modules",
     },
+    borderchars = {
+      prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
+      results = { " " },
+      preview = { " " },
+    },
   },
   pickers = {
     buffers = {
       sort_lastused = true,
-      theme = "dropdown",
+      theme = "cursor",
       previewer = false,
       mappings = {
         i = {
@@ -20,7 +28,7 @@ require('telescope').setup {
       }
     },
     find_files = {
-      theme = "dropdown",
+      theme = "cursor",
       previewer = false,
     }
   },
