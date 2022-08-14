@@ -3,7 +3,6 @@ require("config/tokyonight")
 
 require("config/autopairs")
 require("config/autotag")
-require("config/lspsaga")
 require("config/gitsigns")
 require("config/mason")
 require("config/bufferline")

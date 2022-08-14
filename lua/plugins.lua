@@ -21,7 +21,6 @@ packer.startup(function(use)
 
   -- themes
   use 'folke/tokyonight.nvim'
-  use 'luisiacc/gruvbox-baby'
   use 'kyazdani42/nvim-web-devicons'
 
   -- autopairs
@@ -80,9 +79,6 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
-  -- lspsaga
-  use 'glepnir/lspsaga.nvim'
 
   -- gitsigns
   use 'lewis6991/gitsigns.nvim'
