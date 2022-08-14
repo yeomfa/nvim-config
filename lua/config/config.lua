@@ -1,5 +1,6 @@
--- require("config/tokyonight")
-require("config/gvbaby")
+require("config/tokyonight")
+-- require("config/gvbaby")
+
 require("config/autopairs")
 require("config/prettier")
 require("config/autotag")
