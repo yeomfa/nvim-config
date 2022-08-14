@@ -2,7 +2,6 @@ require("config/tokyonight")
 -- require("config/gvbaby")
 
 require("config/autopairs")
-require("config/prettier")
 require("config/autotag")
 require("config/lspsaga")
 require("config/gitsigns")

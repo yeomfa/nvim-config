@@ -81,9 +81,6 @@ packer.startup(function(use)
     run = ':TSUpdate'
   }
 
-  -- prettier
-  use 'MunifTanjim/prettier.nvim'
-
   -- lspsaga
   use 'glepnir/lspsaga.nvim'
 
