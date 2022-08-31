@@ -20,18 +20,18 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
 
   -- themes
-  use 'folke/tokyonight.nvim'
+  use 'luisiacc/gruvbox-baby'
   use 'kyazdani42/nvim-web-devicons'
 
   -- autopairs
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
-  -- commentary
-  use 'tpope/vim-commentary'
-
   -- emmet
   use 'mattn/emmet-vim'
+
+  -- commentary
+  use 'tpope/vim-commentary'
 
   -- lualine
   use 'nvim-lualine/lualine.nvim'
@@ -80,12 +80,11 @@ packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- CommentString
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   -- gitsigns
   use 'lewis6991/gitsigns.nvim'
-
-  -- mason
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
 
   -- blankline
   use "lukas-reineke/indent-blankline.nvim"

@@ -36,4 +36,4 @@ mapper("n", "<leader>fh", ":Telescope help_tags<cr>")
 mapper("n", "<leader>fr", ":Telescope oldfiles<cr>")
 
 -- Commentary
-mapper("", "<leader>}", ":Commentary<CR>")
+mapper("", "<leader>}", ":Commentary<cr>")

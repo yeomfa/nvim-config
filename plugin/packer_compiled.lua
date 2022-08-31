@@ -129,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -184,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -199,11 +199,6 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["prettier.nvim"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -218,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
   ["vim-visual-multi"] = {
     loaded = true,

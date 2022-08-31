@@ -25,24 +25,6 @@ nvim_lsp.html.setup {
   cmd = { "vscode-html-language-server", "--stdio" }
 }
 
--- Lua
-nvim_lsp.sumneko_lua.setup {
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the 'vim' global
-        globals = { 'vim' }
-
-      },
-
-      workspace = {
-        -- Make the server aware of neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true)
-      }
-    }
-  }
-}
-
 -- Python
 nvim_lsp.pyright.setup {
   filetypes = { "python" },

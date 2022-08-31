@@ -6,7 +6,7 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 wo.number = true
-o.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 o.relativenumber = true
 o.backup = false
 o.mouse = 'a'

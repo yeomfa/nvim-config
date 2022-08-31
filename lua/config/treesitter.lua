@@ -8,7 +8,7 @@ ts.setup {
 	},
 	indent = {
 		enable = true,
-		disable = {},
+		disable = {'python'},
 	},
 	ensure_installed = {
 		'tsx',
@@ -23,5 +23,8 @@ ts.setup {
 	},
 	autotag = {
 		enable = true,
-	}
+	},
+  context_commentstring = {
+    enable = true,
+  }
 }

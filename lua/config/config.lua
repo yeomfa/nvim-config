@@ -1,10 +1,8 @@
-require("config/tokyonight")
--- require("config/gvbaby")
+require("config/gbbaby")
 
 require("config/autopairs")
 require("config/autotag")
 require("config/gitsigns")
-require("config/mason")
 require("config/bufferline")
 require("config/lualine")
 require("config/lsp")
