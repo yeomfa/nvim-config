@@ -36,8 +36,8 @@ packer.startup(function(use)
   -- lualine
   use 'nvim-lualine/lualine.nvim'
 
-  -- bufferline
-  use { 'akinsho/bufferline.nvim', tag = "v2.*" }
+  -- -- bufferline
+  -- use { 'akinsho/bufferline.nvim', tag = "v2.*" }
 
   -- lspConfig
   use 'neovim/nvim-lspconfig'
@@ -91,5 +91,11 @@ packer.startup(function(use)
 
   -- friendly snippets
   use "rafamadriz/friendly-snippets"
+
+  -- Cokeline
+  use({
+    'noib3/nvim-cokeline',
+    requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+  })
 
 end)

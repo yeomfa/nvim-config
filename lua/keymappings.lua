@@ -14,19 +14,32 @@ mapper("n", "<leader>o", ":NvimTreeFocus<CR>")
 mapper("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Bufferline
-mapper("n", "<leader>l", ":BufferLineCycleNext<CR>")
-mapper("n", "<leader>h", ":BufferLineCyclePrev<CR>")
-mapper("n", "<leader>bc", ":BufferLinePickClose<CR>")
-mapper("n", "<leader>bp", ":BufferLinePick<CR>")
-mapper("n", "<leader>ch", ":BufferLineCloseLeft<CR>")
-mapper("n", "<leader>cl", ":BufferLineCloseRight<CR>")
-mapper("n", "<leader>ca", ":bd<CR>")
+-- mapper("n", "<leader>l", ":BufferLineCycleNext<CR>")
+-- mapper("n", "<leader>h", ":BufferLineCyclePrev<CR>")
+-- mapper("n", "<leader>bc", ":BufferLinePickClose<CR>")
+-- mapper("n", "<leader>bp", ":BufferLinePick<CR>")
+-- mapper("n", "<leader>ch", ":BufferLineCloseLeft<CR>")
+-- mapper("n", "<leader>cl", ":BufferLineCloseRight<CR>")
+-- mapper("n", "<leader>ca", ":bd<CR>")
+--
+-- Cokeline
+local map = vim.api.nvim_set_keymap
+
+map('n', '<leader>h', '<Plug>(cokeline-focus-prev)',  { silent = true })
+map('n', '<leader>l', '<Plug>(cokeline-focus-next)',  { silent = true })
+map('n', '<leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
+map('n', '<leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
+map('n', '<leader>c', ':bd<cr>', { silent = true })
+
+for i = 1,9 do
+  map('n', ('<F%s>'):format(i),      ('<Plug>(cokeline-switch-%s)'):format(i),  { silent = true })
+  map('n', ('<leader>%s'):format(i), ('<Plug>(cokeline-focus-%s)'):format(i), { silent = true })
+end
 
 -- Packer
 mapper("n", "<leader>pi", ":PackerInstall<CR>")
 mapper("n", "<leader>pu", ":PackerUpdate<CR>")
-mapper("n", "<leader>ps", ":PackerStatus<CR>")
-mapper("n", "<leader>pc", ":PackerCompile<CR>")
+mapper("n", "<leader>ps", ":PackerSync<CR>")
 
 -- Telescope
 mapper("n", "<leader>ff", ":Telescope find_files<cr>")
