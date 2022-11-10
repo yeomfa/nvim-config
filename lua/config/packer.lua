@@ -1,5 +1,6 @@
 local status, packer = pcall(require, "packer")
 if (not status) then return end
+local userPlugins = require("jetPlugins")
 
 packer.init {
   display = {
@@ -11,7 +12,12 @@ packer.init {
 
 vim.cmd [[packadd packer.nvim]]
 
+
 packer.startup(function(use)
+
+  for _, plugin in pairs(userPlugins) do
+    use (plugin)
+  end
 
   -- packer
   use 'wbthomason/packer.nvim'
@@ -96,3 +102,5 @@ packer.startup(function(use)
   use 'ggandor/lightspeed.nvim'
 
 end)
+
+require("jetPlugins")
