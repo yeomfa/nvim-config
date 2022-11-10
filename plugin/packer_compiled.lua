@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -143,11 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-cokeline"] = {
-    loaded = true,
-    path = "/home/yeom/.local/share/nvim/site/pack/packer/start/nvim-cokeline",
-    url = "https://github.com/noib3/nvim-cokeline"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,

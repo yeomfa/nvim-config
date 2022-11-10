@@ -9,6 +9,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       open_on_setup = false,
       open_on_setup_file = false,
       open_on_tab = false,
+      focus_empty_on_setup = false,
       -- ignore_buf_on_tab_change = {},
       sort_by = "name",
       root_dirs = {},
@@ -16,11 +17,13 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       sync_root_with_cwd = false,
       reload_on_bufenter = false,
       respect_buf_cwd = false,
+      on_attach = "disable",
+      remove_keymaps = false,
+      select_prompts = false,
       view = {
         adaptive_size = false,
         centralize_selection = false,
         width = 25,
-        height = 30,
         hide_root_folder = true,
         side = "left",
         preserve_window_proportions = false,
@@ -35,6 +38,17 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             { key = "d", action = "trash" },
           },
         },
+        float = {
+          enable = false,
+          open_win_config = {
+            relative = "editor",
+            border = "rounded",
+            width = 25,
+            height = 30,
+            row = 1,
+            col = 1,
+          },
+        },
       },
       renderer = {
         add_trailing = false,
@@ -43,12 +57,15 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         full_name = false,
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
+        indent_width = 2,
         indent_markers = {
           enable = false,
+          inline_arrows = true,
           icons = {
             corner = "└",
             edge = "│",
             item = "│",
+            bottom = "─",
             none = " ",
           },
         },
@@ -68,6 +85,8 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             symlink = "",
             bookmark = "",
             folder = {
+              arrow_closed = "",
+              arrow_open = "",
               default = "",
               open = "",
               empty = "",
@@ -106,7 +125,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       diagnostics = {
         enable = false,
         show_on_dirs = false,
-        -- debounce_delay = 50,
+        debounce_delay = 50,
         icons = {
           hint = "ﯦ",
           info = "",
@@ -140,6 +159,15 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           max_folder_discovery = 300,
           exclude = {},
         },
+        file_popup = {
+          open_win_config = {
+            col = 1,
+            row = 1,
+            relative = "cursor",
+            border = "shadow",
+            style = "minimal",
+          },
+        },
         open_file = {
           quit_on_open = false,
           resize_window = true,
@@ -171,7 +199,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
           all = false,
           config = false,
           copy_paste = false,
-          -- dev = false,
+          dev = false,
           diagnostics = false,
           git = false,
           profile = false,

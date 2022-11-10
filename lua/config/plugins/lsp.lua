@@ -1,8 +1,11 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
+local util = require 'lspconfig/util'
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+local root_pattern = util.root_pattern("package.json")
 
 -- Typescript and react js
 nvim_lsp.tsserver.setup {
@@ -35,4 +38,7 @@ nvim_lsp.pyright.setup {
 nvim_lsp.ccls.setup {
   filetypes = { "c", "cpp", "objc", "objcpp" },
   cmd = { 'ccls' },
+  root_dir = function(fname)
+    return root_pattern(fname) or vim.loop.os_homedir()
+  end;
 }
