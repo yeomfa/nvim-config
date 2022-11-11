@@ -1,6 +1,6 @@
 vim.g.indentLine_fileTypeExclude = { 'dashboard' }
 local dash = require("dashboard")
-local jet_config = require("jetConfig")
+local jet_config = require("jet.JetConfig")
 local header = jet_config.header
 dash.custom_center = {
   {

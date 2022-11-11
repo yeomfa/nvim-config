@@ -1,6 +1,6 @@
 local status, packer = pcall(require, "packer")
 if (not status) then return end
-local userPlugins = require("jetPlugins")
+local userPlugins = require("jet.JetPlugins")
 
 packer.init {
   display = {
@@ -102,5 +102,3 @@ packer.startup(function(use)
   use 'ggandor/lightspeed.nvim'
 
 end)
-
-require("jetPlugins")
