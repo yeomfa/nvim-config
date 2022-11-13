@@ -1,15 +1,27 @@
 require("jet.config")
-local command = require("jet.commands")
+local configs = require("jet.configs")
 local cmd = vim.api.nvim_create_user_command
 
-cmd('JetConfig', command.jet_config(), {})
+cmd('JetConfig', configs.jet_config(), {})
 
-cmd('JetConfigPlugin', function(otps)
-  command.jet_config_plugin(unpack(otps.fargs))
-end, { nargs=1, complete=function() return command.get_plugins() end })
+cmd('JetConfigPlugin', function(opts)
+  configs.jet_config_plugin(unpack(opts.fargs))
+end, {
+  nargs = 1,
+  complete = function(lead)
+    return configs.get_options(lead)
+  end
+})
 
-cmd('JetPlugins', command.jet_plugins(), {})
+cmd('JetPlugins', configs.jet_plugins(), {})
 
-cmd('JetRemovePlugin', command.in_dev(), {})
+cmd('JetRemovePlugin', function(opts)
+  configs.jet_remove_plugin(unpack(opts.fargs))
+end, {
+  nargs = 1,
+  complete = function(lead)
+    return configs.get_options(lead)
+  end
+})
 
-cmd('JetUpdate', command.in_dev(), {})
+cmd('JetUpdate', configs.in_dev(), {})

@@ -1,7 +1,30 @@
 vim.g.indentLine_fileTypeExclude = { 'dashboard' }
 local dash = require("dashboard")
 local jet_config = require("jet.JetConfig")
-local header = jet_config.header
+local load_header = {}
+
+if jet_config.dashboard.custom then
+  load_header = { "", "", "", "", "",  }
+  local header = jet_config.dashboard.header
+
+  for _, line in pairs(header) do
+    table.insert(load_header, line)
+  end
+else
+  load_header = { "", "", "", "", "",
+        "",
+        "",
+        "    ▀██▀      ██        ",
+        "     ██ ██▀▀█ ██▀▀      ",
+        "    ██ ██▀▀▀ ██       ",
+        "   █▄██ ██▄▄▄ ██▄▄ Nvim ",
+        "",
+        "",
+  }
+end
+
+dash.custom_header = load_header
+
 dash.custom_center = {
   {
     icon = "  ",
@@ -28,8 +51,5 @@ dash.custom_center = {
 		action = "q",
 	},
 } 
-
-dash.custom_header = header
-
 
 dash.custom_footer = {"", "", " Hello Jet!", "", "v0.0.0"}
