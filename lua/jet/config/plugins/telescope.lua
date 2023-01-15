@@ -7,6 +7,7 @@ telescope.setup {
     selection_caret = "❯ ",
     file_ignore_patterns = {
       "node_modules",
+      "target",
     },
     borderchars = {
       prompt = { "─", " ", " ", " ", "─", "─", " ", " " },

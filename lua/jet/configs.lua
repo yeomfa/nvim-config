@@ -1,5 +1,5 @@
-local run_cmd = vim.api.nvim_command
 local C = {}
+local utils = require('jet.utils')
 local path = {
   config = '~/.config/nvim/lua/jet/JetConfig.lua',
   plugins = '~/.config/nvim/lua/jet/JetPlugins.lua',
@@ -15,10 +15,6 @@ local function get_plugins()
   end
   pfile:close()
   return plugins
-end
-
-local function jet_msg(msg)
-  print('Jet msg: ' .. msg)
 end
 
 function C.get_options(lead)
@@ -48,7 +44,7 @@ function C.jet_config_plugin(plugin)
 
   if plugin:match('^.+(%..+)$') then
     if plugin:match('^.+(%..+)$') ~= '.lua' then
-      jet_msg('Just enter the file name or with extension .lua !')
+      utils.jet_msg('Just enter the file name or with extension .lua !')
       return
     else
       pluginName = plugin:match('(.+)%..+$')  
@@ -56,7 +52,7 @@ function C.jet_config_plugin(plugin)
   end
 
   local cmd = 'e '.. path.folderPlugins .. pluginName .. '.lua'
-  run_cmd(cmd)
+  utils.run_cmd(cmd)
 end
 
 function C.jet_plugins()
@@ -66,11 +62,11 @@ end
 
 function C.jet_remove_plugin(plugin)
   local pluginName = plugin
-  local cmd, rm = 'n' 
+  local cmd, rm = 'n', local_path 
 
   if plugin:match('^.+(%..+)$') then
     if plugin:match('^.+(%..+)$') ~= '.lua' then
-      jet_msg('Just enter the file name or with extension .lua !')
+      utils.jet_msg('Just enter the file name or with extension .lua !')
       return
     else
       pluginName = plugin:match('(.+)%..+$')  
@@ -81,14 +77,17 @@ function C.jet_remove_plugin(plugin)
     prompt = 'Remove plugin ' .. pluginName .. ' ? y/N:'
   }, function(input)
     rm = input
+    utils.clear_cmdline()
+    if rm == 'y' or rm == 'Y' then
+      local_path = path.folderPlugins .. pluginName .. '.lua'
+      print(local_path)
+      pcall("FileRemoved", local_path)
+      -- vim.fn.delete(expand(local_path))
+    else
+      utils.jet_msg('Cancelled !')
+    end 
   end)
 
-  if rm == 'y' or rm == 'Y' then
-    cmd = '!rm '.. path.folderPlugins .. pluginName .. '.lua'
-    run_cmd(cmd)
-  else
-    jet_msg('Cancelled !')
-  end 
 end
 
 function C.in_dev()

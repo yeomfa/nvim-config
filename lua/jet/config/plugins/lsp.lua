@@ -11,7 +11,10 @@ local root_pattern = util.root_pattern("package.json")
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
-  cmd = { "typescript-language-server", "--stdio" }
+  cmd = { "typescript-language-server", "--stdio" },
+  root_dir = function(fname)
+    return root_pattern(fname) or vim.loop.os_homedir()
+  end;
 }
 
 -- Css
@@ -41,4 +44,10 @@ nvim_lsp.ccls.setup {
   root_dir = function(fname)
     return root_pattern(fname) or vim.loop.os_homedir()
   end;
+}
+
+-- Rust
+nvim_lsp.rust_analyzer.setup {
+  filetypes = { "rust" },
+  cmd = { 'rust-analyzer' }
 }

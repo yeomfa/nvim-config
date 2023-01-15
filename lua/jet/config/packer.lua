@@ -26,7 +26,7 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
 
   -- themes
-  use 'luisiacc/gruvbox-baby'
+  use 'yeomfa/jetly'
   use 'kyazdani42/nvim-web-devicons'
 
   -- autopairs

@@ -1,6 +1,6 @@
 local jet_config = require("jet.JetConfig")
-require("jet.config.plugins.gbbaby")
--- requirjet.e("config.plugins.jetly")
+-- require("jet.config.plugins.gbbaby")
+require("jet.config.plugins.jetly")
 require("jet.config.plugins.autopairs")
 require("jet.config.plugins.autotag")
 require("jet.config.plugins.gitsigns")

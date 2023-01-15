@@ -6,12 +6,12 @@
 
 local J = {
 
--- DEFAULT PLUGINS
+  -- DEFAULT PLUGINS
   plugins = {
     NvimTree = true,
   },
 
--- HEADER
+  -- HEADER
   dashboard = {
     custom = false,
     header = {
