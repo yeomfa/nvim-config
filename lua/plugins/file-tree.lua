@@ -30,14 +30,6 @@ return {
       number = false,
       relativenumber = false,
       signcolumn = "yes",
-      -- mappings = {
-      --   custom_only = false,
-      --   list = {
-      --     -- user mappings go here
-      --     { key = "D", action = "remove" },
-      --     { key = "d", action = "trash" },
-      --   },
-      -- },
       float = {
         enable = false,
         quit_on_focus_loss = true,

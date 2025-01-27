@@ -26,3 +26,6 @@ mapper('n', '<leader>cl', ':BufferLineCloseRight<CR>')
 -- Telescope
 mapper('n', '<leader>ff', ':Telescope find_files<cr>')
 mapper('n', '<leader>fr', ':Telescope oldfiles<cr>')
+
+-- Toggleterm
+mapper('n', '<leader>t', ':ToggleTerm<cr>')
