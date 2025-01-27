@@ -21,14 +21,14 @@ return {
         sort_lastused = true,
         theme = "cursor",
         previewer = false,
-        mappings = {
-          i = {
-            ["<c-d>"] = require("telescope.actions").delete_buffer,
-          },
-          n = {
-            ["<c-d>"] = require("telescope.actions").delete_buffer,
-          }
-        }
+        -- mappings = {
+        --   i = {
+        --     ["<c-d>"] = require("telescope.actions").delete_buffer,
+        --   },
+        --   n = {
+        --     ["<c-d>"] = require("telescope.actions").delete_buffer,
+        --   }
+        -- }
       },
       find_files = {
         theme = "cursor",
