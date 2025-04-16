@@ -26,18 +26,5 @@ return {
       cmd = { 'vscode-html-language-server', '--stdio' }
     }
 
-    require('lspconfig').rust_analyzer.setup {
-      filetypes = { 'rust' },
-      cmd = { 'rust-analyzer' }
-    }
-
-    require('lspconfig').phpactor.setup {
-      filetypes = { 'php' },
-      on_attach = on_attach,
-      -- root_dir = function(fname)
-      --   return root_pattern(fname) or vim.loop.os_homedir()
-      -- end;
-    }
-
   end
 }

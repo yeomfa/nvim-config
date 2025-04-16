@@ -6,11 +6,6 @@ return {
       require('leap').add_default_mappings()
     end
   },
-  -- Colorizer
-  {
-    'norcalli/nvim-colorizer.lua',
-    config = true
-  },
 
   -- Autopairs
   {
