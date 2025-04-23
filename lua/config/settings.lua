@@ -7,6 +7,9 @@ vim.scriptencoding = 'utf-8'
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 
+opt.fileformat = 'unix'
+opt.fileformats = { 'unix', 'dos' }
+
 wo.number = true
 opt.clipboard = 'unnamedplus'
 o.relativenumber = true

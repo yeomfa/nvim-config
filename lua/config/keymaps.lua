@@ -2,13 +2,12 @@ local mapper = function(mode, key, result)
 	vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
+-- Leader
 vim.g.mapleader = ' '
 
 -- Text editor
 mapper('n', '<leader>w', ':w<CR>')
 mapper('n', '<leader>q', ':q<CR>')
-mapper('n', '<leader>s', ':sort<CR>')
-mapper('v', '<leader>s', ':sort<CR>')
 mapper('n', '<leader>ca', ':bd<CR>')
 
 -- FileTree
@@ -27,5 +26,12 @@ mapper('n', '<leader>cl', ':BufferLineCloseRight<CR>')
 mapper('n', '<leader>ff', ':Telescope find_files<cr>')
 mapper('n', '<leader>fr', ':Telescope oldfiles<cr>')
 
--- Toggleterm
-mapper('n', '<leader>t', ':ToggleTerm<cr>')
+-- Split window
+mapper('n', '<leader>ss', ':split<cr>')
+mapper('n', '<leader>sv', ':vsplit<cr>')
+
+-- Move window
+mapper('n', '<leader>sh', '<C-w>h')
+mapper('n', '<leader>sj', '<C-w>j')
+mapper('n', '<leader>sk', '<C-w>k')
+mapper('n', '<leader>sl', '<C-w>l')
