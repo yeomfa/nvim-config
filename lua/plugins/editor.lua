@@ -35,4 +35,13 @@ return {
     },
     config = true
   },
+
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    config = function()
+      vim.api.nvim_set_keymap('n', '<C-n>', ':call VM_find_under()<CR>', { noremap = true, silent = true })
+    end,
+  },
+
 }
